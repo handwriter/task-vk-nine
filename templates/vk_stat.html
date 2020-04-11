@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    {% if activity != {} %}
+    <h1>Activities</h1>
+    <table class="table">
+      <tbody>
+        {% for act in activity %}
+            <tr>
+              <td>{{ act }}</td>
+              <td>{{ activity[act] }}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+    {% if ages != {} %}
+    <h1>Ages</h1>
+    <table class="table">
+      <tbody>
+        {% for age in ages %}
+            <tr>
+              <td>{{ age }}</td>
+              <td>{{ ages[age] }}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+    {% if cities != [] %}
+    <h1>Cities</h1>
+    <table class="table">
+      <tbody>
+        {% for city in cities %}
+            <tr>
+              <td>{{ city }}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+
+{% endblock %}
